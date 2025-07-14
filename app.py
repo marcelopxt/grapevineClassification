@@ -13,8 +13,8 @@ def load_model():
     #https://drive.google.com/file/d/1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp/view?usp=sharing
     url = 'https://drive.google.com/uc?id=1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp'
     gd.download(url, 'modelo_quantizado16bits.tflite')
-    interpreter = tf.lite.Interpreter(model_path="modelo_quantizado16bits.tflite")
-    interpreter.alocate_tensors()
+    interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
+    interpreter.allocate_tensors()
     return interpreter
 
 
