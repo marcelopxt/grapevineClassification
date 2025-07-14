@@ -12,7 +12,7 @@ import plotly.express as px
 def load_model():
     #https://drive.google.com/file/d/1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp/view?usp=sharing
     url = 'https://drive.google.com/uc?id=1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp'
-    gd.down(url, 'modelo_quantizado16bits.tflite')
+    gd.download(url, 'modelo_quantizado16bits.tflite')
     interpreter = tf.lite.Interpreter(model_path="modelo_quantizado16bits.tflite")
     interpreter.alocate_tensors()
     return interpreter
@@ -28,7 +28,7 @@ def load_image():
         image = np.array(image, dtype=np.float32)
         image = image/255.0
         image = np.expande_dims(image, axis=0)    
-    return image    
+        return image    
 
 def main():
     st.set_page_config(page_title="Classiica folhas de Videiras!")
