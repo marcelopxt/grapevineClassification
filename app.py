@@ -27,7 +27,7 @@ def load_image():
         st.success("Imagem foi carregada com sucesso!")
         image = np.array(image, dtype=np.float32)
         image = image/255.0
-        image = np.expande_dims(image, axis=0)    
+        image = np.expand_dims(image, axis=0)    
         return image    
 
 def main():
