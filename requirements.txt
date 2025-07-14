@@ -2,5 +2,5 @@ gdown
 tensorflow
 numpy
 io
-plotly.expess
+plotly
 pillow
