@@ -1,2 +1,6 @@
 gdown
 tensorflow
+numpy
+io
+plotly.expess
+pillow
